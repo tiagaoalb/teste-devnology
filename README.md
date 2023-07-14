@@ -5,13 +5,24 @@ Repositório contendo o teste para a Devnology
 ## Passos para executar o script
 
 1. Clone o repositório
-2. Instale as dependências com o comando abaixo:
+
+```sh
+git clone git@github.com:tiagaoalb/teste-devnology.git
+```
+
+2. Acesse o diretório
+
+```sh
+cd teste-devnology
+```
+
+3. Instale as dependências com o comando abaixo:
 
 ```sh
 npm install
 ```
 
-3. Execute o script com o comando:
+4. Execute o script com o comando:
 
 `Linux ou Mac`
 
@@ -25,4 +36,4 @@ node index.js
 node .\index.js
 ```
 
-4. Verifique a saída do resultado no arquivo **`lenovoLaptops.json`**. Devem constar apenas os laptops da Lenovo com seus preços em ordem crescente.
+5. Verifique a saída do resultado no arquivo **`lenovoLaptops.json`**. Devem constar apenas os laptops da Lenovo com seus preços em ordem crescente.
