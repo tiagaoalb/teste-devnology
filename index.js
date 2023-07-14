@@ -18,7 +18,7 @@ async function scrapeLenovoLaptops(url) {
     laptopNodes.forEach((node) => {
       const laptopJson = {}
       const laptopName = node.querySelector('a.title').getAttribute('title')
-      const laptopDescription = node.querySelector('p.description').innerText
+      const laptopDescription = node.querySelector('p.description').innerText.replace('\"', '')
       const laptopRatings = node.querySelector('p.pull-right').innerText
       const laptopStars = node.querySelector('p[data-rating]').getAttribute('data-rating')
       const laptopPrice = node.querySelector('h4.pull-right.price').innerText
