@@ -18,11 +18,17 @@ async function scrapeLenovoLaptops(url) {
     laptopNodes.forEach((node) => {
       const laptopJson = {}
       const laptopName = node.querySelector('a.title').getAttribute('title')
+      const laptopDescription = node.querySelector('p.description').innerText
+      const laptopRatings = node.querySelector('p.pull-right').innerText
+      const laptopStars = node.querySelector('p[data-rating]').getAttribute('data-rating')
       const laptopPrice = node.querySelector('h4.pull-right.price').innerText
 
       if (laptopName.includes('Lenovo')) {
         laptopJson.name = laptopName
         laptopJson.price = laptopPrice
+        laptopJson.description = laptopDescription
+        laptopJson.ratings = laptopRatings
+        laptopJson.stars = laptopStars
         laptopList.push(laptopJson)
       }
     })
